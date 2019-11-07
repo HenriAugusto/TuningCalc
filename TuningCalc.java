@@ -50,32 +50,32 @@ class JustApproximatorUsingEDO implements IntervalCompare{
   }
   
   void compareJust(IntervalReference i){
-      double just = (double)i.just_n/i.just_d;
-      double x = div*(Math.log(just) / Math.log(2));
-      int just_r = (int)Math.round(x); //aproximating the just interval with an integer
-      double just_r_edo = Math.pow(2,just_r/div); //using that approximation to calculate the interval
-      double diff_in_cents = 1200*Math.log(just_r_edo/just)/ Math.log(2);//using 12-edo cents, of course
+      double just = i.getJust();
+      double exact = div*(Math.log(just) / Math.log(2)); //the exact numerator of the exponent
+      int rounded_num = (int)Math.round(exact); //rounded numerator
+      double rounded_interval = Math.pow(2,rounded_num/div); //using that approximation to calculate the interval
+      double diff_in_cents = 1200*Math.log(rounded_interval/just)/ Math.log(2);//using 12-edo cents, of course
       System.out.println("    ------Comparing "+(int)div+"-EDO with the just interval------");
       System.out.println("    "+i.just_n+"/"+i.just_d+" = "+just);
-      System.out.println("    exact = "+x); //that would give exact the just interval
-      System.out.println("    round = "+just_r);
-      System.out.println("    2^("+just_r+"/"+(int)div+") = "+just_r_edo);
+      System.out.println("    exact = "+exact); //that would give exact the just interval
+      System.out.println("    round = "+rounded_num);
+      System.out.println("    2^("+rounded_num+"/"+(int)div+") = "+rounded_interval);
       System.out.println("    ["+(int)div+"-edo/just] cents[12edo] = "+diff_in_cents);
       System.out.println("    [12-edo/just] cents[12edo] = "+i.just_to_12edo_diff_in_1200cents());
       System.out.println("");
   }
   
   void compare12EDO(IntervalReference i){
-    double edo12 = Math.pow(2,(double)i.edo12/12);
-      double x = div*(Math.log(edo12) / Math.log(2));
-      int edo_r = (int)Math.round(x);
-      double edo_r_edo = Math.pow(2,edo_r/div); //using that approximation to calculate the interval
-      double diff_in_cents = 1200*Math.log(edo_r_edo/edo12)/ Math.log(2);//using 12-edo cents
+      double edo12 = i.get12EDO();
+      double exact = div*(Math.log(edo12) / Math.log(2)); //the exact numerator of the exponent
+      int rounded_num = (int)Math.round(exact); //rounded numerator
+      double rounded_interval = Math.pow(2,rounded_num/div); //using that approximation to calculate the interval
+      double diff_in_cents = 1200*Math.log(rounded_interval/edo12)/ Math.log(2);//using 12-edo cents
       System.out.println("    ------Comparing "+(int)div+"-EDO with 12-EDO------");
       System.out.println("    2^("+i.edo12+"/12) = "+edo12);
-      System.out.println("    exact = "+x); //that would give exact the div-EDO interval
-      System.out.println("    round "+edo_r);
-      System.out.println("    2^("+edo_r+"/"+(int)div+") = "+edo_r_edo);
+      System.out.println("    exact = "+exact); //that would give exact the div-EDO interval
+      System.out.println("    round "+rounded_num);
+      System.out.println("    2^("+rounded_num+"/"+(int)div+") = "+rounded_interval);
       System.out.println("    ["+(int)div+"edo/12-edo] cents[12edo] = "+diff_in_cents);
     System.out.println("\n");
   }
