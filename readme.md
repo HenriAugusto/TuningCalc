@@ -23,3 +23,4 @@ it compares it in two ways:
 
 Observations:
 - currently interval names are in portuguese (6ª maior = minor sixth, etc)
+- we give difference in cents in 12-edo (that is, 12 semitones divided by 100 or 1200-EDO) because we are familiar with it and allows us to reasonably use our perception of a 12-edo semitone (the one we are used to) to compare. For example: in 12-EDO a perfect fifth is about 2 cents lower than 3/2. If you use 19-EDO you can use this program to find that 2^(11/19) is the closest interval to the 3/2 fifth and that it is about 7 (12-EDO) cents lower than the 3/2 fifth;
