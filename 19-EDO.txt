@@ -157,14 +157,14 @@ tritone [17/12] 12-edo[6]
     [19edo/12-edo] cents[12edo] = 21.052631578947494
 
 
-6ª Maior [16/15] 12-edo[9]
+6ª Maior [5/3] 12-edo[9]
     ------Comparing 19-EDO with the just interval------
-    16/15 = 1.0666666666666667
-    exact = 1.7690786834381478
-    round = 2
-    2^(2/19) = 1.0756905862201824
-    [19-edo/just] cents[12edo] = 14.584504203906283
-    [12-edo/just] cents[12edo] = 788.2687147302222
+    5/3 = 1.6666666666666667
+    exact = 14.002346289157918
+    round = 14
+    2^(14/19) = 1.666524012797089
+    [19-edo/just] cents[12edo] = -0.14818668365810736
+    [12-edo/just] cents[12edo] = 15.641287000552364
 
     ------Comparing 19-EDO with 12-EDO------
     2^(9/12) = 1.681792830507429
@@ -280,8 +280,8 @@ tritone [17/12] 12-edo[6]
     [19-edo/just] in cents[12edo] = 7.366345443782211
 
 2^(14/19) = 1.666524012797089
-    closest = 6ª menor [8/5] 12-edo[8]
-    [19-edo/just] in cents[12edo] = 70.52424018062418
+    closest = 6ª Maior [5/3] 12-edo[9]
+    [19-edo/just] in cents[12edo] = -0.14818668365810736
 
 2^(15/19) = 1.7284437865632112
     closest = 7ª menor [7/4] 12-edo[10]
@@ -302,3 +302,4 @@ tritone [17/12] 12-edo[6]
 2^(19/19) = 2.0
     closest = 8ª Justa [2/1] 12-edo[12]
     [19-edo/just] in cents[12edo] = 0.0
+

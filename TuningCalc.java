@@ -17,7 +17,7 @@ public class TuningCompare
     iref.add(new IntervalReference("tritone",17,12,6)); //both 17th and 12th harmonics are close to 12-edo
     iref.add(new IntervalReference("5ª Justa",3,2,7));
     iref.add(new IntervalReference("6ª menor",8,5,8));
-    iref.add(new IntervalReference("6ª Maior",16,15,9));
+    iref.add(new IntervalReference("6ª Maior",5,3,9));
     iref.add(new IntervalReference("7ª menor",7,4,10));
     iref.add(new IntervalReference("7ª Maior",15,8,11));
     iref.add(new IntervalReference("8ª Justa",2,1,12));
