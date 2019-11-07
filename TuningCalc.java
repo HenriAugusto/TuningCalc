@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class TuningCompare
 {
   static ArrayList<IntervalReference> iref = new ArrayList<>();
-  static int edo_compare = 16;
+  static int edo_compare = 19;
   // arguments are passed using the text field below this editor
   public static void main(String[] args)
   {    
@@ -26,24 +26,26 @@ public class TuningCompare
       case JUST:
         break;
       case EDO:
-        EDOCompare edoc = new EDOCompare(edo_compare);
+        EDOPrinter.printEDO(edo_compare);
+        JustApproximatorUsingEDO edoc = new JustApproximatorUsingEDO(edo_compare);
         edoc.compare(iref);
+        EDOApproximatorUsingJust.approximateEDOinJustIntervals(edo_compare,iref);
         break;
     }
   }
 }
 
-class EDOCompare implements IntervalCompare{
+class JustApproximatorUsingEDO implements IntervalCompare{
   double div;
-  EDOCompare(double div){ this.div = div; }
+  JustApproximatorUsingEDO(double div){ this.div = div; }
   
   public void compare(ArrayList<IntervalReference> iref){
-    //see Appendix1.tex for the math
+    System.out.println("===========Approximating just intervals with "+(int)div+"-EDO===========\n");
+    //see Appendix[1] for the math
     for (IntervalReference i : iref) {
       i.print();
       compareJust(i);
       compare12EDO(i);
-      System.out.println("\n");
     }
   }
   
@@ -58,8 +60,9 @@ class EDOCompare implements IntervalCompare{
       System.out.println("    exact = "+x); //that would give exact the just interval
       System.out.println("    round = "+just_r);
       System.out.println("    2^("+just_r+"/"+(int)div+") = "+just_r_edo);
-      System.out.println("    ["+(int)div+"-edo/just] cents[1200] = "+diff_in_cents);
-      System.out.println("    [12-edo/just] cents[1200] = "+i.just_to_12edo_diff_in_1200cents());
+      System.out.println("    ["+(int)div+"-edo/just] cents[12edo] = "+diff_in_cents);
+      System.out.println("    [12-edo/just] cents[12edo] = "+i.just_to_12edo_diff_in_1200cents());
+      System.out.println("");
   }
   
   void compare12EDO(IntervalReference i){
@@ -73,7 +76,8 @@ class EDOCompare implements IntervalCompare{
       System.out.println("    exact = "+x); //that would give exact the div-EDO interval
       System.out.println("    round "+edo_r);
       System.out.println("    2^("+edo_r+"/"+(int)div+") = "+edo_r_edo);
-      System.out.println("    ["+(int)div+"edo/12-edo] cents[1200] = "+diff_in_cents);
+      System.out.println("    ["+(int)div+"edo/12-edo] cents[12edo] = "+diff_in_cents);
+    System.out.println("\n");
   }
 }
 
@@ -98,7 +102,11 @@ class IntervalReference
   
   void print(){
     //System.out.println("name: "+name+"\n---numerator: "+just_n+"\n---denumerador: "+just_d+"\n---12-edo: "+edo12);
-    System.out.println("name: "+name+" ["+just_n+"/"+just_d+"] 12-edo["+edo12+"]");
+    System.out.println(toString());
+  }
+  
+  public String toString(){
+    return name+" ["+just_n+"/"+just_d+"] 12-edo["+edo12+"]";
   }
   
   double getJust(){
@@ -119,3 +127,51 @@ enum TuningType
   JUST,
   EDO;
 }
+
+class EDOPrinter{
+  static void printEDO(double div){
+    for(int i=1;i<=div;++i){
+      double x = Math.pow(2,i/div);
+      System.out.println("2^("+i+"/"+(int)div+") = "+x);
+    }
+    System.out.println("\n");
+  }
+}
+
+class EDOApproximatorUsingJust{
+  static void approximateEDOinJustIntervals(double div, ArrayList<IntervalReference> iref){
+    System.out.println("===========Approximating "+(int)div+"-EDO with just intervals===========\n");
+    for(int i=1;i<=div;++i){
+      //the interval
+      double x = Math.pow(2,i/div);
+      //lets find the closest to x in the reference
+      IntervalReference closest = null;
+      double minInterval = 666;
+      for (IntervalReference interval : iref) {
+        /* we'll measure the difference in 12-edo cents because using simple division might be trickier.
+           For example 1.5/1.2 and 1.2/1.5 are similarly distant in terms of pitch interval
+           but the first is 1.25 and the latter is 0.8. So you by using cents you can just take it's 
+           absolute value for comparison. Ex: -5 cents is equally distant to 5 cents*/
+        double cents = 1200*Math.log(x/interval.getJust())/Math.log(2);
+               cents = Math.abs(cents);
+        if(cents<minInterval || closest == null){
+          closest = interval;
+          minInterval = cents;
+        }
+      }
+      System.out.println("2^("+i+"/"+(int)div+") = "+x);
+      System.out.println("    closest = "+closest.toString());
+      double diffIn12EDOcents = 1200*Math.log(x/closest.getJust())/Math.log(2);
+      System.out.println("    ["+(int)div+"-edo/just] in cents[12edo] = "+diffIn12EDOcents);
+      System.out.println("");
+    }
+  }
+}
+
+//Appendix[1]
+//\mbox{\textit{i} is a given interval which might be just or 12-edo} \\
+//\mbox{ \textit{div} is the edo we are analyzing } \\
+//\mbox{we can find the best natural number x that aproximates i} \\
+//2^{\frac{x}{div}} = i \\
+//log_2{(i)}=\frac{x}{div} \\
+//div \cdot log_2{(i)}=x \\
