@@ -10,9 +10,9 @@ It is useful for composers because it lets you have a comparison between differe
 
 For example: In 23-EDO hows does 2^17/23 compare with the intervals we are used to? Is it bigger than a fifth? around a minor seventh? If you run the program you might see some lines like this:
 
-> 2^(17/23) = 1.6691694659381038
->     closest = minor sixth [8/5] 12-edo[8]
->     [23-edo/just] in cents[12edo] = 73.27023560396484
+        2^(17/23) = 1.6691694659381038
+            closest = minor sixth [8/5] 12-edo[8]
+            [23-edo/just] in cents[12edo] = 73.27023560396484
 
 For comparison purposes it also adds information about the 12-edo version of the intervals. This way you can, for example, compare which system have a major third that is closer to 5/4. Is it 12-edo or 19-edo?
 
