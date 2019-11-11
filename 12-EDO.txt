@@ -1,0 +1,269 @@
+2^(1/12) = 1.0594630943592953
+2^(2/12) = 1.122462048309373
+2^(3/12) = 1.189207115002721
+2^(4/12) = 1.2599210498948732
+2^(5/12) = 1.3348398541700344
+2^(6/12) = 1.4142135623730951
+2^(7/12) = 1.4983070768766815
+2^(8/12) = 1.5874010519681994
+2^(9/12) = 1.681792830507429
+2^(10/12) = 1.7817974362806785
+2^(11/12) = 1.8877486253633868
+2^(12/12) = 2.0
+
+
+===========Approximating just intervals with 12-EDO===========
+
+2ª menor [16/15] 12-edo[1]
+    ------Comparing 12-EDO with the just interval------
+    16/15 = 1.0666666666666667
+    exact = 1.1173128526977776
+    round = 1
+    2^(1/12) = 1.0594630943592953
+    [12-edo/just] cents[12edo] = -11.731285269777619
+    [12-edo/just] cents[12edo] = -11.731285269777619
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(1/12) = 1.0594630943592953
+    exact = 1.0000000000000009
+    round 1
+    2^(1/12) = 1.0594630943592953
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+2ª Maior [9/8] 12-edo[2]
+    ------Comparing 12-EDO with the just interval------
+    9/8 = 1.125
+    exact = 2.0391000173077485
+    round = 2
+    2^(2/12) = 1.122462048309373
+    [12-edo/just] cents[12edo] = -3.9100017307748662
+    [12-edo/just] cents[12edo] = -3.9100017307748662
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(2/12) = 1.122462048309373
+    exact = 2.0000000000000004
+    round 2
+    2^(2/12) = 1.122462048309373
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+3ª menor [7/6] 12-edo[3]
+    ------Comparing 12-EDO with the just interval------
+    7/6 = 1.1666666666666667
+    exact = 2.6687090560373763
+    round = 3
+    2^(3/12) = 1.189207115002721
+    [12-edo/just] cents[12edo] = 33.129094396262275
+    [12-edo/just] cents[12edo] = 33.129094396262275
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(3/12) = 1.189207115002721
+    exact = 2.9999999999999996
+    round 3
+    2^(3/12) = 1.189207115002721
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+3ª Maior [5/4] 12-edo[4]
+    ------Comparing 12-EDO with the just interval------
+    5/4 = 1.25
+    exact = 3.863137138648348
+    round = 4
+    2^(4/12) = 1.2599210498948732
+    [12-edo/just] cents[12edo] = 13.686286135165219
+    [12-edo/just] cents[12edo] = 13.686286135165219
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(4/12) = 1.2599210498948732
+    exact = 4.0
+    round 4
+    2^(4/12) = 1.2599210498948732
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+4ª Justa [4/3] 12-edo[5]
+    ------Comparing 12-EDO with the just interval------
+    4/3 = 1.3333333333333333
+    exact = 4.980449991346124
+    round = 5
+    2^(5/12) = 1.3348398541700344
+    [12-edo/just] cents[12edo] = 1.9550008653876134
+    [12-edo/just] cents[12edo] = 1.9550008653876134
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(5/12) = 1.3348398541700344
+    exact = 5.0
+    round 5
+    2^(5/12) = 1.3348398541700344
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+tritone [17/12] 12-edo[6]
+    ------Comparing 12-EDO with the just interval------
+    17/12 = 1.4166666666666667
+    exact = 6.0300040863502
+    round = 6
+    2^(6/12) = 1.4142135623730951
+    [12-edo/just] cents[12edo] = -3.000408635019754
+    [12-edo/just] cents[12edo] = -3.000408635019754
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(6/12) = 1.4142135623730951
+    exact = 6.000000000000002
+    round 6
+    2^(6/12) = 1.4142135623730951
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+5ª Justa [3/2] 12-edo[7]
+    ------Comparing 12-EDO with the just interval------
+    3/2 = 1.5
+    exact = 7.019550008653875
+    round = 7
+    2^(7/12) = 1.4983070768766815
+    [12-edo/just] cents[12edo] = -1.9550008653873927
+    [12-edo/just] cents[12edo] = -1.9550008653873927
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(7/12) = 1.4983070768766815
+    exact = 7.0
+    round 7
+    2^(7/12) = 1.4983070768766815
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+6ª menor [8/5] 12-edo[8]
+    ------Comparing 12-EDO with the just interval------
+    8/5 = 1.6
+    exact = 8.136862861351654
+    round = 8
+    2^(8/12) = 1.5874010519681994
+    [12-edo/just] cents[12edo] = -13.686286135165306
+    [12-edo/just] cents[12edo] = -13.686286135165306
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(8/12) = 1.5874010519681994
+    exact = 7.999999999999998
+    round 8
+    2^(8/12) = 1.5874010519681994
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+6ª Maior [5/3] 12-edo[9]
+    ------Comparing 12-EDO with the just interval------
+    5/3 = 1.6666666666666667
+    exact = 8.843587129994475
+    round = 9
+    2^(9/12) = 1.681792830507429
+    [12-edo/just] cents[12edo] = 15.641287000552364
+    [12-edo/just] cents[12edo] = 15.641287000552364
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(9/12) = 1.681792830507429
+    exact = 9.0
+    round 9
+    2^(9/12) = 1.681792830507429
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+7ª menor [7/4] 12-edo[10]
+    ------Comparing 12-EDO with the just interval------
+    7/4 = 1.75
+    exact = 9.688259064691248
+    round = 10
+    2^(10/12) = 1.7817974362806785
+    [12-edo/just] cents[12edo] = 31.174093530875016
+    [12-edo/just] cents[12edo] = 31.174093530875016
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(10/12) = 1.7817974362806785
+    exact = 10.0
+    round 10
+    2^(10/12) = 1.7817974362806785
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+7ª Maior [15/8] 12-edo[11]
+    ------Comparing 12-EDO with the just interval------
+    15/8 = 1.875
+    exact = 10.88268714730222
+    round = 11
+    2^(11/12) = 1.8877486253633868
+    [12-edo/just] cents[12edo] = 11.731285269777747
+    [12-edo/just] cents[12edo] = 11.731285269777747
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(11/12) = 1.8877486253633868
+    exact = 11.0
+    round 11
+    2^(11/12) = 1.8877486253633868
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+8ª Justa [2/1] 12-edo[12]
+    ------Comparing 12-EDO with the just interval------
+    2/1 = 2.0
+    exact = 12.0
+    round = 12
+    2^(12/12) = 2.0
+    [12-edo/just] cents[12edo] = 0.0
+    [12-edo/just] cents[12edo] = 0.0
+
+    ------Comparing 12-EDO with 12-EDO------
+    2^(12/12) = 2.0
+    exact = 12.0
+    round 12
+    2^(12/12) = 2.0
+    [12edo/12-edo] cents[12edo] = 0.0
+
+
+===========Approximating 12-EDO with just intervals===========
+
+2^(1/12) = 1.0594630943592953
+    closest = 2ª menor [16/15] 12-edo[1]
+    [12-edo/just] in cents[12edo] = -11.731285269777619
+
+2^(2/12) = 1.122462048309373
+    closest = 2ª Maior [9/8] 12-edo[2]
+    [12-edo/just] in cents[12edo] = -3.9100017307748662
+
+2^(3/12) = 1.189207115002721
+    closest = 3ª menor [7/6] 12-edo[3]
+    [12-edo/just] in cents[12edo] = 33.129094396262275
+
+2^(4/12) = 1.2599210498948732
+    closest = 3ª Maior [5/4] 12-edo[4]
+    [12-edo/just] in cents[12edo] = 13.686286135165219
+
+2^(5/12) = 1.3348398541700344
+    closest = 4ª Justa [4/3] 12-edo[5]
+    [12-edo/just] in cents[12edo] = 1.9550008653876134
+
+2^(6/12) = 1.4142135623730951
+    closest = tritone [17/12] 12-edo[6]
+    [12-edo/just] in cents[12edo] = -3.000408635019754
+
+2^(7/12) = 1.4983070768766815
+    closest = 5ª Justa [3/2] 12-edo[7]
+    [12-edo/just] in cents[12edo] = -1.9550008653873927
+
+2^(8/12) = 1.5874010519681994
+    closest = 6ª menor [8/5] 12-edo[8]
+    [12-edo/just] in cents[12edo] = -13.686286135165306
+
+2^(9/12) = 1.681792830507429
+    closest = 6ª Maior [5/3] 12-edo[9]
+    [12-edo/just] in cents[12edo] = 15.641287000552364
+
+2^(10/12) = 1.7817974362806785
+    closest = 7ª menor [7/4] 12-edo[10]
+    [12-edo/just] in cents[12edo] = 31.174093530875016
+
+2^(11/12) = 1.8877486253633868
+    closest = 7ª Maior [15/8] 12-edo[11]
+    [12-edo/just] in cents[12edo] = 11.731285269777747
+
+2^(12/12) = 2.0
+    closest = 8ª Justa [2/1] 12-edo[12]
+    [12-edo/just] in cents[12edo] = 0.0
