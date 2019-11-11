@@ -1,10 +1,12 @@
 This program is still in early development.
 
-Currently it is used to approximate **just-intonation intervals** (that, currently, you define manually editing the code) with intervals using different EDO systems (Currently you also need to set the EDO manually by setting the line.
+Currently it is used to approximate **just-intonation intervals** (that, currently, you define manually editing the code) with intervals using different EDO systems. Currently you also need to set the EDO manually by setting the line.
 
 ```Java
 static int edo_compare = 19;
 ```
+
+(This code was created to be easy to copy-pasted into an web site such as [compilejava.net](https://www.compilejava.net/), hence you need to edit the variables manually in the code)
 
 It is useful for composers because it lets you have a comparison between different EDO systems and a system you know (just intonation or 12-EDO). 
 
